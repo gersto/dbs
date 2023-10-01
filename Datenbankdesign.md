@@ -30,6 +30,39 @@ Die 4 Phasen eines Datenbankentwurfs:
 
 [https://info-wsf.de/informationsstruktur-ermitteln-externe-phase/](https://info-wsf.de/informationsstruktur-ermitteln-externe-phase/)
 
+- **Top-Down** versus **Bottom-Up**-Ansatz
+- Ermittlung aufgrund von Realitätsbeobachtungen Erzeugung eines Ausschnitts der realen Welt -> **Miniwelt**
+  
+  Beispielsweise ist die Schule ein Teil der realen Welt. Unter dem Blickwinkel der Verwaltung von Schülerdaten würde unsere Miniwelt aus den Objekten Schüler, Lehrer, Bücher, Kurse, Noten und deren Beziehungen zueinander bestehen; andere Objekte der Schule, wie Gebäudedaten, Reinigungskosten usw. würden ausgeklammert. Wir bilden deshalb im Hinblick auf die logische Gesamtsicht ein Modell der Miniwelt.
+- Ermittlung aufgrund von Benutzersichtanalysen<br>
+  Benutzersichten stellen zum Beispiel Formulare und Berichte dar.
+- Ermittlung aufgrund von Datenbestandsanalysen<br>
+  Dieses Verfahren ermöglicht die Integration existierender Datenbestände in ein neues Datenmodell -> **Migration**
+- Geschäftsregeln<br>
+  Feststellungen über die Objekte der Miniwelt.
+
+### Konzeptionelle Phase
+Wie im Datenbankentwurf ausgeführt, ist es zunächst sinnvoll, ein konzeptionelles Modell des gegebenen Problems zu erstellen.
+
+Dabei lassen sich drei Abstraktionsmechanismen unterscheiden:
+- **Klassifikation**
+- **Aggregation**
+- **Generalisierung oder Spezialisierung**
+
+Um die Modellierung der Realität systematischer gestalten zu können, gibt es verschiedene Standardstrategien. Eine der bekanntesten ist das so genannte Entity-Relationship-Modell (ER-Modell). Neben dem ER-Modell gibt es weitere Datenbankmodelle, z.B. das Hierarchische Modell (HM), das Netzwerkmodell (NWM), das Relationenmodell (RM), das SQL-Datenmodell (SQL) oder das Normalformmodell (NFM).
+
+Abstraktionskonzepte:<br>
+Bei der Erstellung eines Datenmodells werden die Objekte und deren Eigenschaften untersucht. Es werden zuerst alle Daten (Objekte) gesammelt. In einem Prozess der Abstraktion werden dann gleichartige Mengen von Objekten zusammengefasst und auf relevante Eigenschaften untersucht. In der Informatik existieren bestimmte Konzepte, nach denen dieser Abstraktionsprozess erfolgt.
+
+#### Klassifikation
+
+Gleichartige Dinge (Objekte) mit gemeinsamen Eigenschaften werden zu Klassen zusammengefasst.
+
+#### Aggregation
+
+
+
+
 
 
 
