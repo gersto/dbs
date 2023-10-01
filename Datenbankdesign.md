@@ -60,6 +60,54 @@ Gleichartige Dinge (Objekte) mit gemeinsamen Eigenschaften werden zu Klassen zus
 
 #### Aggregation
 
+Eine neue Klasse wird aus anderen, bereits existierenden Klassen zusammengesetzt bzw. besteht zum Teil aus Objekten anderer Klassen.
+
+#### Generalisierung (Verallgemeinerung)
+
+Zwischen bestimmten Klassen wird eine Teilmengenbeziehung hergestellt. Dabei stellt eine Klasse eine Verallgemeinerung der anderen Klasse dar. Zum Beispiel ist die Klasse Tier eine Verallgemeinerung der Klassen Vögel, Reptilien und Säugetiere. Die Eigenschaften der verallgemeinerten Klasse werden den Klassen vererbt, die Teilmengen dieser Klasse sind.
+
+#### Assoziation
+
+Objekte bzw. Klassen können miteinander in Beziehung gesetzt (assoziiert) werden. Diese Beziehung kann zwischen zwei oder mehr Objekten aufgebaut werden.
+
+#### Identifikation
+
+Eigenschaftswerte bzw. Kombinationen von Eigenschaftswerten der Objekte werden als Schlüssel definiert und dienen der eindeutigen Identifizierung des Objekts. Über diese Schlüssel werden die Objekte assoziiert.
+
+### Beispiele der konzeptionellen Phase
+
+#### Galerie
+
+- Eine Galerie kann eindeutig über ihren Namen identifiziert werden, und sie besitzt eine Adresse.
+- Eine Galerie präsentiert Ausstellungen, die durch die Angaben ihres Titels eindeutig identifizierbar sind. Außerdem müssen ihr Anfangs- und Enddatum festgehalten werden.
+- Eine Ausstellung setzt sich aus mehreren Kunstgegenständen zusammen, die durch eine global eindeutige Registriernummer identifizierbar sind und eine Bezeichnung haben.
+- Außerdem soll die Art der Kunstgegenstände gespeichert werden, die entweder „Gemälde“ oder „Skulptur“ (nichts anderes) sein kann.
+- Der Name des Künstlers sowie das Jahr der Erschaffung müssen erfasst werden.
+- Der Künstler kann in einer Ausstellung mehrere Kunstgegenstände präsentieren.
+- Eine Galerie muss (im gesamten erfassten Zeitraum) mindestens eine Ausstellung präsentieren. Eine Ausstellung findet in genau einer Galerie statt.
+- Ein Kunstgegenstand ist (im Laufe der Zeit) Bestandteil von beliebig vielen (oder keiner) Ausstellung(en). Eine Ausstellung besteht aus mindestens 5 Kunstgegenstände.
+
+#### Fuhrpark
+
+Die Firma Atlanta GmbH hat einen Fuhrpark von Firmenwägen, die von Mitarbeitern für berufliche Zwecke genutzt werden können. Das Unternehmen möchte die Verwaltung des Fuhrparks, die bislang ausschließlich in Papierform erfolgt, auf eine IT-gestützte Lösung umstellen.
+
+Erstellen Sie aufgrund der folgenden Unterlagen und Anforderungen ein Entity-Relationship-Diagramm.
+- Reservierung<br>
+  Mitarbeiter füllen einen Reservierungsvordruck aus. Ein Verantwortlicher des Fuhrparks ordnet der Reservierung dann ein Fahrzeug zu und vermerkt dessen Kennzeichen auf dem Reservierungsvordruck.
+  
+  ![dbs03.png](pic/dbs03.png)
+  
+  Wird ein neues Fahrzeug angeschafft, erfasst die Fuhrparkverwaltung dessen Daten in folgender Tabelle.
+  
+  ![dbs04.png](pic/dbs04.png)
+  
+- Instandhaltung<br>
+  Bei Reparaturen beziehungsweise Wartungsarbeiten an Fahrzeugen sollen Datum, Kilometerstand, Kosten sowie eine kurze Beschreibung in der Datenbank festgehalten werden.
+- KFZ-Versicherung<br>
+  Als zusätzliche Anforderung sollen auch einige Daten der Kfz-Versicherungen der Fahrzeuge in die Datenbank integriert werden.
+  Verlangt werden jeweils folgende Informationen: die Versicherungsnummer, ob zusätzlich zur Haftpflichtversicherung eine Vollkasko bzw. Teilkasko abgeschlossen wurde, die Höhe des jährlichen Beitrags sowie der Firmenname der jeweiligen Versicherungsgesellschaft, inklusive Postanschrift und Telefonnummer.
+  Es soll auch möglich sein, die Kontaktdaten einer Versicherungsgesellschaft zu erfassen, mit der bisher noch kein Kfz-Versicherungsvertrag abgeschlossen worden ist.
+  Es reicht aus, wenn für jeden Firmenwagen jeweils der aktuelle Vertrag gespeichert werden kann. Eine Historie wird nicht verlangt.
 
 
 
