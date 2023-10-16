@@ -74,6 +74,31 @@ Objekte bzw. Klassen können miteinander in Beziehung gesetzt (assoziiert) werde
 
 Eigenschaftswerte bzw. Kombinationen von Eigenschaftswerten der Objekte werden als Schlüssel definiert und dienen der eindeutigen Identifizierung des Objekts. Über diese Schlüssel werden die Objekte assoziiert.
 
+#### Beziehungen
+
+ - **Beziehungen**: Durch Beziehungen werden die Wechselwirkungen oder Abhängigkeiten von Entitäten ausgedrückt. Beziehungen können Eigenschaften besitzen.
+ - **Beziehungsmenge**: Eine Beziehungsmenge (Assoziation) ist eine Sammlung von Beziehungen gleicher Art zur Verknüpfung von Entitätsmengen (Tabellen).
+ - **Beziehungstyp**: Ein Beziehungstyp ist, analog zum Entity-Typ, die Abstraktion gleichartiger Beziehungen.
+
+Beziehungsgrade:<br>
+- **Binär**, wenn genau zwei Entities miteinander verbunden sind
+- **Ternär**, wenn genau drei Entities miteinander verbunden sind
+- **n-är**, wenn mehrere, d. h. genau n Entities miteinander verbunden sind
+- **Rekursiv unär**, wenn ein Entity mit sich selbst in Beziehung steht
+
+Spezielle Beziehungsformen:<br>
+- **Rekursive Beziehungen** entstehen, wenn ein Entity-Typ eine Assoziation auf sich selbst besitzt (rekursiv unäre Beziehung).
+  ![dbs05.JPG](pic/dbs05.JPG)
+- Das Konzept der **Aggregation** wird durch eine **Part-of-Beziehung** (Ist-Teil-von-Beziehung) ausgedrückt (n-äre Beziehung).
+  ![dbs06.JPG](pic/dbs06.JPG)
+- Is-a-Beziehungen drücken eine Generalisierung (Verallgemeinerung) oder Spezialisierung aus, d. h., sie stellen eine Teilmengenbeziehung dar
+  ![dbs07.JPG](pic/dbs07.JPG)
+
+#### Kardinalität
+
+- [https://michael-fuchs-sql.netlify.app/2021/03/03/entity-relationship-diagram-erd/](https://michael-fuchs-sql.netlify.app/2021/03/03/entity-relationship-diagram-erd/)
+- [https://michael-fuchs-sql.netlify.app/](https://michael-fuchs-sql.netlify.app/)
+
 ### Beispiele der konzeptionellen Phase
 
 #### Galerie
