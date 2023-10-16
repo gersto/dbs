@@ -138,5 +138,16 @@ Erstellen Sie aufgrund der folgenden Unterlagen und Anforderungen ein Entity-Rel
 
 ![dbs08.JPG](pic/dbs08.JPG)
 
+#### Baufirma
+Erstellen Sie ein ER-Modell für den folgenden Sachverhalt: Eine Baufirma möchte eine Datenbankanwendung einsetzen, um die Kundenaufträge und vorhandenen Ressourcen (Lager, Fahrzeuge, Fahrer) besser planen zu können.<br>
+In der Firma sind Büroangestellte, Fahrer, Arbeiter und Techniker angestellt.<br>
+Die Büroangestellten betreuen die Kunden und nehmen die Aufträge der Kunden entgegen.<br>
+Die Arbeiter und Fahrer führen die Aufträge aus. Der Fahrer benutzt dazu einen Lieferwagen oder einen Lkw. Für einen Auftrag werden ein Fahrer und ein oder mehrere Arbeiter benötigt. Für einige Aufträge werden Materialien aus dem Lager benötigt.<br>
+Der Techniker betreut den Fuhrpark, zu dem die Lieferwagen und Lkws gehören.<br>
+Versehen Sie die Entity-Typen des ER-Modells mit Attributen, die Sie für notwendig halten, und legen Sie auch Primärschlüssel fest. Beschriften Sie die Beziehungen und geben Sie die Kardinalitäten an.
+
+#### Lehrveranstaltungen
+Die Planung der Lehrveranstaltungen für Lehrer, Klassen und Räume soll in einem ER-Modell dargestellt werden. Zu beachten ist dabei, dass nicht jeder Unterricht in jedem beliebigen Raum abgehalten werden kann (z. B. Computer-Unterricht nur in Räumen, in denen sich
+Computer befinden). Alle Angehörigen der Bildungseinrichtung und die Zugehörigkeit zu den Abteilungen bzw. Klassen sind ebenfalls in das Modell zu integrieren. Die Lehrer bieten zu bestimmten Fächern Zusatzkurse an, die von einer bestimmten Anzahl an Schülern besucht werden können. Nehmen Sie auch diesen Aspekt mit in das Modell auf.
 
 
