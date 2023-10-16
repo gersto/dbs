@@ -180,13 +180,13 @@ Die Primärschlüssel werden übernommen
 #### 1:1- und 1:n-Beziehungen
 2 Möglichkeiten:
 - Es wird eine neue Relation erzeugt, welche als Attribute (Spalten) die Primärschlüssel der beiden Relationen, die in Beziehung stehen, enthält. Außerdem kann die Relation beschreibende Attribute in einer zusätzlichen Spalte aufnehmen.<br>
-Diese Darstellungsform hat den Vorteil, dass keine NULL-Werte auftreten, und den Nachteil, dass eine weitere Relation benötigt wird.
+Diese Darstellungsform hat den Vorteil, dass keine NULL-Werte auftreten, und den Nachteil, dass eine weitere Relation benötigt wird.<br>
 ![dbs11.JPG](pic/dbs11.JPG)
 - Eine der beiden Relationen wird um ein Attribut (Spalte) erweitert. Bei 1:1-Beziehungen ist es egal, welche der beiden Relationen erweitert wird. In einer 1:n-Beziehung wird die Relation erweitert, bei der das n steht. (Würde das Attribut an die Relation angefügt
 werden, bei der die 1 steht, würden Redundanzen auftreten, die Sie unbedingt vermeiden sollten.) Besitzt die Relation beschreibende Attribute, so werden diese zusätzlich noch bei der erweiterten Relation angegeben.
 Bei dieser Darstellungsform können NULL-Werte auftreten. Sie hat aber den Vorteil, dass keine zusätzliche Relation benötigt wird. Für das obige Beispiel bedeutet dies, dass die Relation MITARBEITER erweitert wird.
 Ein NULL-Wert kann in diesem Beispiel auftreten, wenn ein Mitarbeiter keiner Abteilung
-zugeordnet ist.
+zugeordnet ist.<br>
 ![dbs12.JPG](pic/dbs12.JPG)
 
 #### m:n-Beziehungen
@@ -200,13 +200,21 @@ Für das obige Beispiel wird eine Relation arbeitet_an benötigt. Das Relationen
 
 Für die Überführung einer Is-a-Beziehung gibt es mehrere Möglichkeiten, die von dem jeweiligen Schema und von der Umgebung (dem Kontext) abhängig sind. In jedem Fall ist aber keine zusätzliche Relation für die Beziehung nötig.
 - Es wird für jede Entitätsmenge eine Relation mit den relevanten Attributen angelegt. Den Teilmengen (Spezialisierungen)
-wird der Primärschlüssel der Obermenge (Generalisierung) als Fremdschlüssel hinzugefügt, um die Zuordnung zu sichern.
+wird der Primärschlüssel der Obermenge (Generalisierung) als Fremdschlüssel hinzugefügt, um die Zuordnung zu sichern.<br>
 ![dbs15.JPG](pic/dbs15.JPG)
 ![dbs16.JPG](pic/dbs16.JPG)
 - Es wird nur eine Relation angelegt, die relevante Attribute der Teilmengen, sofern vorhanden, mit aufnimmt. Diese Möglichkeit der Umsetzung kann dann angewandt werden, wenn die Teilmengen keine oder wenige eigene Attribute haben.<br>
-An die Relation kann bei dieser Variante ein Attribut (z. B. Is-a) angefügt werden, welches für die Zuordnung steht.
+An die Relation kann bei dieser Variante ein Attribut (z. B. Is-a) angefügt werden, welches für die Zuordnung steht.<br>
 ![dbs17.JPG](pic/dbs17.JPG)
 ![dbs18.JPG](pic/dbs18.JPG)
+
+## Normalisierung des Datenbankschemas
+
+Ziel der Normalisierung des relationalen Datenbankschemas ist es,
+- Anomalien zu beheben,
+- Redundanzen zu vermeiden,
+- einen übersichtlichen und möglichst einfachen Aufbau der Relationen zu erhalten,
+- eine einfache Datenpflege zu ermöglichen.
 
 
 
