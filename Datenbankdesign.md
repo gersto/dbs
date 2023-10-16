@@ -134,8 +134,9 @@ Erstellen Sie aufgrund der folgenden Unterlagen und Anforderungen ein Entity-Rel
   Es soll auch möglich sein, die Kontaktdaten einer Versicherungsgesellschaft zu erfassen, mit der bisher noch kein Kfz-Versicherungsvertrag abgeschlossen worden ist.<br>
   Es reicht aus, wenn für jeden Firmenwagen jeweils der aktuelle Vertrag gespeichert werden kann. Eine Historie wird nicht verlangt.
 
+#### Kunden- und Projektverwaltung
 
-
+![dbs08.JPG](pic/dbs08.JPG)
 
 
 
