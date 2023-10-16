@@ -87,11 +87,11 @@ Beziehungsgrade:<br>
 - **Rekursiv unär**, wenn ein Entity mit sich selbst in Beziehung steht
 
 Spezielle Beziehungsformen:<br>
-- **Rekursive Beziehungen** entstehen, wenn ein Entity-Typ eine Assoziation auf sich selbst besitzt (rekursiv unäre Beziehung).
+- **Rekursive Beziehungen** entstehen, wenn ein Entity-Typ eine Assoziation auf sich selbst besitzt (rekursiv unäre Beziehung).<br>
   ![dbs05.JPG](pic/dbs05.JPG)
-- Das Konzept der **Aggregation** wird durch eine **Part-of-Beziehung** (Ist-Teil-von-Beziehung) ausgedrückt (n-äre Beziehung).
+- Das Konzept der **Aggregation** wird durch eine **Part-of-Beziehung** (Ist-Teil-von-Beziehung) ausgedrückt (n-äre Beziehung).<br>
   ![dbs06.JPG](pic/dbs06.JPG)
-- Is-a-Beziehungen drücken eine Generalisierung (Verallgemeinerung) oder Spezialisierung aus, d. h., sie stellen eine Teilmengenbeziehung dar
+- Is-a-Beziehungen drücken eine Generalisierung (Verallgemeinerung) oder Spezialisierung aus, d. h., sie stellen eine Teilmengenbeziehung dar<br>
   ![dbs07.JPG](pic/dbs07.JPG)
 
 #### Kardinalität
