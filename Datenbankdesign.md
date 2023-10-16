@@ -150,4 +150,45 @@ Versehen Sie die Entity-Typen des ER-Modells mit Attributen, die Sie für notwen
 Die Planung der Lehrveranstaltungen für Lehrer, Klassen und Räume soll in einem ER-Modell dargestellt werden. Zu beachten ist dabei, dass nicht jeder Unterricht in jedem beliebigen Raum abgehalten werden kann (z. B. Computer-Unterricht nur in Räumen, in denen sich
 Computer befinden). Alle Angehörigen der Bildungseinrichtung und die Zugehörigkeit zu den Abteilungen bzw. Klassen sind ebenfalls in das Modell zu integrieren. Die Lehrer bieten zu bestimmten Fächern Zusatzkurse an, die von einer bestimmten Anzahl an Schülern besucht werden können. Nehmen Sie auch diesen Aspekt mit in das Modell auf.
 
+### Relationales Modell
+Das relationale Datenmodell wurde 1970 von dem Mathematiker E. F. Codd entwickelt und mithilfe der Mengentheorie beschrieben. Dieses Modell bildet die Basis für relationale Datenbanken.
+
+#### Relation
+Eine Relation ist im Sinne einer relationalen Datenbank eine Menge von Tupeln (Datensätzen). Sie hat die Form einer Tabelle und ist damit eine Konstruktion aus Spalten und Zeilen. Sowohl Entitäten als auch Beziehungen des Entity-Relationship-Modells werden als Relationen modelliert.
+
+Eine Relation ist gekennzeichnet durch …
+- einen eindeutigen Namen, beispielsweise: Kunde,
+- mehrere Attribute (Spalten),
+- keine bis beliebig viele Tupel (Tabellenzeilen oder Datensätze),
+- einen einzigen Wert pro Attribut in einem Tupel (Tabellenzelle),
+- einen Primärschlüssel, bestehend aus einem oder mehreren Attributen
+- Dieser identifiziert jedes Tupel eindeutig
+- Dessen Wert ändert sich während der Existenz des Datensatzes nicht
+
+
+### Transformation des ER-Modells in ein relationales Modell
+Das folgende ER-Modell soll in ein relationales Modell überführt werden.
+
+![dbs09.JPG](pic/dbs09.JPG)
+
+#### Entitätsmengen
+Für jede Entitätsmenge wird eine Relation erstellt, welche für jedes Attribut eine Spalte besitzt.
+Die Primärschlüssel werden übernommen
+
+![dbs10.JPG](pic/dbs10.JPG)
+
+#### 1:1- und 1:n-Beziehungen
+2 Möglichkeiten:
+
+- Es wird eine neue Relation erzeugt, welche als Attribute (Spalten) die Primärschlüssel der beiden Relationen, die in Beziehung stehen, enthält. Außerdem kann die Relation beschreibende Attribute in einer zusätzlichen Spalte aufnehmen.<br>
+Diese Darstellungsform hat den Vorteil, dass keine NULL-Werte auftreten, und den Nachteil, dass eine weitere Relation benötigt wird.
+- Eine der beiden Relationen wird um ein Attribut (Spalte) erweitert. Bei 1:1-Beziehungen ist es egal, welche der beiden Relationen erweitert wird. In einer 1:n-Beziehung wird die Relation erweitert, bei der das n steht. (Würde das Attribut an die Relation angefügt
+werden, bei der die 1 steht, würden Redundanzen auftreten, die Sie unbedingt vermeiden sollten.) Besitzt die Relation beschreibende Attribute, so werden diese zusätzlich noch bei der erweiterten Relation angegeben.
+Bei dieser Darstellungsform können NULL-Werte auftreten. Sie hat aber den Vorteil, dass keine zusätzliche Relation benötigt wird. Für das obige Beispiel bedeutet dies, dass die Relation MITARBEITER erweitert wird.
+
+
+
+
+
+
 
