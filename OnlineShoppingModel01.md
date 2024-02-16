@@ -98,6 +98,49 @@ After identifying the entities that compose it and sketching the conceptual mode
 
 ## Step 3 - Build the Logical Model with PK and FK
 
+### Customer
+- customer_id **PK**
+
+### Cart
+- cart_id	**PK**
+- Customer_customer_id **PK**
+- Customer_customer_id **FK**
+- Product_product_id **FK**
+
+### Wishlist
+- wishlist_id	**PK**
+- Customer_customer_id **PK**
+- Customer_customer_id **FK**
+- Product_product_id **FK**
+
+
+### Product
+- product_id	**PK**
+- Customer_category_id **FK**
+
+### Category
+- category_id	**PK**
+
+### Order
+- order_id	**PK**
+- Customer_customer_id **FK**
+- Payment_payment_id **FK**
+- Shipment_shipment_id **FK**
+
+### Order_item
+- order_item_id	**PK**
+- Order_order_id **PK**
+- Product_product_id **FK**
+- Order_order_id **FK**
+
+### Payment
+- payment_id	**PK**
+- Customer_customer_id **FK**
+
+### Shipment
+- shipment_id	**PK**
+- Customer_customer_id **FK**
+
 
 ![OnlineDesign04.JPG](pic/OnlineDesign04.JPG)
 
