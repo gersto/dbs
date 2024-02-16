@@ -231,4 +231,45 @@ REFERENCES Customer (customer_id);
 -- Reference: Cart_Product (table: Cart)
 ALTER TABLE Cart ADD CONSTRAINT Cart_Product FOREIGN KEY Cart_Product (Product_product_id)
 REFERENCES Product (product_id);
+
+-- Reference: Wishlist_Customer (table: Wishlist)
+ALTER TABLE Wishlist ADD CONSTRAINT Wishlist_Customer FOREIGN KEY Wishlist_Customer (Customer_customer_id)
+REFERENCES Customer (customer_id);
+
+-- Reference: Wishlist_Product (table: Wishlist)
+ALTER TABLE Wishlist ADD CONSTRAINT Wishlist_Product FOREIGN KEY Wishlist_Product (Product_product_id)
+REFERENCES Product (product_id);
+
+-- Reference: Shipment_Customer (table: Shipment)
+ALTER TABLE Shipment ADD CONSTRAINT Shipment_Customer FOREIGN KEY Shipment_Customer (Customer_customer_id)
+REFERENCES Customer (customer_id);
+
+-- Reference: Product_Category (table: Product)
+ALTER TABLE Product ADD CONSTRAINT Product_Category FOREIGN KEY Product_Category (Category_category_id)
+REFERENCES Category (category_id);
+
+-- Reference: Payment_Customer (table: Payment)
+ALTER TABLE Payment ADD CONSTRAINT Payment_Customer FOREIGN KEY Payment_Customer (Customer_customer_id)
+REFERENCES Customer (customer_id);
+
+-- Reference: Order_Item_Product (table: Order_Item)
+ALTER TABLE Order_Item ADD CONSTRAINT Order_Item_Product FOREIGN KEY Order_Item_Product (Product_product_id)
+REFERENCES Product (product_id);
+
+-- Reference: Order_Item_Order (table: Order_Item)
+ALTER TABLE Order_Item ADD CONSTRAINT Order_Item_Order FOREIGN KEY Order_Item_Order (Order_order_id)
+REFERENCES Order (order_id);
+
+-- Reference: Order_Customer (table: Order)
+ALTER TABLE Order ADD CONSTRAINT Order_Customer FOREIGN KEY Order_Customer (Customer_customer_id)
+REFERENCES Customer (customer_id);
+
+-- Reference: Order_Shipment (table: Order)
+ALTER TABLE Order ADD CONSTRAINT Order_Shipment FOREIGN KEY Order_Shipment (Shipment_shipment_id)
+REFERENCES Shipment (shipment_id);
+
+-- Reference: Order_Payment (table: Order)
+ALTER TABLE Order ADD CONSTRAINT Order_Payment FOREIGN KEY Order_Payment (Payment_payment_id)
+REFERENCES Payment (payment_id);
 ```
+
