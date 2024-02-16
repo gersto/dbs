@@ -147,6 +147,42 @@ After identifying the entities that compose it and sketching the conceptual mode
 ## Step 4 - Create sql-script
 
 ```sql
+-- Table: Customer
+CREATE TABLE Customer (
+    customer_id int NOT NULL,
+    first_name varchar(100) NOT NULL,
+    last_name varchar(100) NOT NULL,
+    email varchar(100) NOT NULL,
+    address varchar(200) NOT NULL,
+    phone_number varchar(100),
+    CONSTRAINT Customer_pk PRIMARY KEY (customer_id)
+);
+-- Table: Shipment
+CREATE TABLE Shipment (
+    shipment_id int NOT NULL,
+    shipment_date datetime NOT NULL,
+    address varchar(200) NOT NULL,
+    city varchar(100),
+    state varchar(20),
+    country varchar(50),
+    zip_code varchar(10),
+    CONSTRAINT Shipment_pk PRIMARY KEY (shipment_id)
+);
+-- Table: Order
+CREATE TABLE Order (
+    order_id int NOT NULL,
+    order_date datetime NOT NULL,
+    total_price decimal(10,2) NOT NULL,
+    CONSTRAINT Order_pk PRIMARY KEY (order_id)
+);
+-- Table: Payment
+CREATE TABLE Payment (
+    payment_id int NOT NULL,
+    payment_date datetime NOT NULL,
+    payment_method varchar(100) NOT NULL,
+    amount decimal(10,2),
+    CONSTRAINT Payment_pk PRIMARY KEY (payment_id)
+);
 -- Table: Cart
 CREATE TABLE Cart (
     cart_id int NOT NULL,
@@ -154,6 +190,38 @@ CREATE TABLE Cart (
     Customer_customer_id int NOT NULL,
     Product_product_id int NOT NULL,
     CONSTRAINT Cart_pk PRIMARY KEY (cart_id,Customer_customer_id)
+);
+-- Table: Wishlist
+CREATE TABLE Wishlist (
+    wishlist_id int NOT NULL,
+    Customer_customer_id int NOT NULL,
+    CONSTRAINT Wishlist_pk PRIMARY KEY (wishlist_id,Customer_customer_id)
+);
+-- Table: Product
+CREATE TABLE Product (
+    product_id int NOT NULL,
+    SKU varchar(100) NOT NULL,
+    description varchar(100) NOT NULL,
+    price decimal(10,2) NOT NULL,
+    stock int NOT NULL,
+    address varchar(200) NOT NULL,
+    CONSTRAINT Product_pk PRIMARY KEY (product_id)
+);
+
+-- Table: Order_Item
+CREATE TABLE Order_Item (
+    order_item_id int NOT NULL,
+    quantity int NOT NULL,
+    price decimal(10,2) NOT NULL,
+    Order_order_id int,
+    CONSTRAINT Order_Item_pk PRIMARY KEY (order_item_id,Order_order_id)
+);
+
+-- Table: Category
+CREATE TABLE Category (
+    category_id int NOT NULL,
+    name varchar(100) NOT NULL,
+    CONSTRAINT Category_pk PRIMARY KEY (category_id)
 );
  
 -- Reference: Cart_Customer (table: Cart)
