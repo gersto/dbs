@@ -13,4 +13,4 @@ Identify the entities
 - **Cart**: The customer’s virtual basket or shopping cart, which stores items before they are purchased and become part of an order.
 - **Wishlist**: Stores items chosen by the customer for possible future purchases.
 
-![OnlineDesign01.JPG](pictures/OnlineDesign01.JPG)
+![OnlineDesign01.JPG](pic/OnlineDesign01.JPG)
