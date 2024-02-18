@@ -1,3 +1,5 @@
+Frage: erstelle mir ein er-diagramm für einen online shop
+
 Ein grundlegendes ER-Diagramm für einen Online-Shop könnte folgende Entitäten (Entities) und deren Beziehungen (Relationships) umfassen:
 
 ## Entitäten
