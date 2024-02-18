@@ -28,4 +28,6 @@ Ein grundlegendes ER-Diagramm für einen Online-Shop könnte folgende Entitäten
 - **Bestellung wird bezahlt durch Zahlung (1 zu 1 oder 1 zu N)**:<br>
   Jede Bestellung hat mindestens eine Zahlungstransaktion. In manchen Fällen könnte eine Bestellung auch in Raten bezahlt werden, was zu mehreren Zahlungseinträgen führen würde.
 
-[xxx](xxx)
+![OnlineDesign10.JPG](pic/OnlineDesign10.JPG)
+
+![OnlineDesign11.JPG](pic/OnlineDesign11.JPG)
