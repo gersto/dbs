@@ -1,7 +1,40 @@
 ## Einführung
 
+- **SQL**
+  - Structured Query Language
+  - Programmiersprache für die Abfrage von relationalen Datenbanken
+  - Datenbanken in Form von Tabellen
+  - Beispiele: MySQL, Oracle, ...
+- **noSQL**
+  - not only SQL
+  - Datenbanken nicht aus Tabellen aufgebaut
+  - Beispiele: MongoDB, Redis, ...
+
+### Kategorien:
+- **Spaltenorientierte Datenbanken**<br>
+  speichern Daten in Form von Spalten und nicht in Zeilen
+- **Schlüssel-Werte-Datenbanken**<br>
+  ein Wert wird mithilfe eines Schlüssels eruiert
+- **Dokumentenspeicher**<br>
+  speichert Daten in Form von Dokumenten, die beliebig strukturiert werden können
+- **Graph-Datenbanken**<br>
+  speichern Daten in Form einer Graphenstruktur, bei der Knoten und Kanten die Daten miteinander verbinden
+
+### Skalierbarkeit:
+- SQL-DB werden in der Regel vertikal skaliert (mehr Leistung für den Server)
+- noSQL-DB werden in der Regel horizontal skaliert (hinzufügen von weiteren Servern)
+
+### Datenbanktransaktionsmodelle:
+- ACID
+- [https://medium.com/@pranabj.aec/acid-cap-and-base-cc73dee43f8c](https://medium.com/@pranabj.aec/acid-cap-and-base-cc73dee43f8c)
+- [https://aws.amazon.com/de/compare/the-difference-between-acid-and-base-database/](https://aws.amazon.com/de/compare/the-difference-between-acid-and-base-database/)
+
 ## Links YouTube
 - [https://www.youtube.com/watch?v=2Pv-uUozpV4](https://www.youtube.com/watch?v=2Pv-uUozpV4)
+- [https://www.youtube.com/watch?v=kvLbRit22AM](https://www.youtube.com/watch?v=kvLbRit22AM)
+- [https://www.youtube.com/watch?v=IJ8gdGPJz6k](https://www.youtube.com/watch?v=IJ8gdGPJz6k)
+- [https://www.youtube.com/watch?v=Pf-9pjJK1e0](https://www.youtube.com/watch?v=Pf-9pjJK1e0)
+- [https://www.youtube.com/watch?v=VfcRxtBKI54](https://www.youtube.com/watch?v=VfcRxtBKI54)
 - [https://www.youtube.com/watch?v=W1NbRuRnvrc](https://www.youtube.com/watch?v=W1NbRuRnvrc)
 - [https://www.youtube.com/watch?v=HOtrRY583YE&t=6s](https://www.youtube.com/watch?v=HOtrRY583YE&t=6s)
 - [https://www.youtube.com/watch?v=B3gJT3t8g4Q](https://www.youtube.com/watch?v=B3gJT3t8g4Q)
