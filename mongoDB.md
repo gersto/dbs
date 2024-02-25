@@ -1,6 +1,67 @@
 ## Grundlagen
 
 ### Installation
+Im folgenden soll die Installation der MongoDB Community Edition ein wenig erklärt werden:<br>
+siehe auch [https://www.mongodb.com/docs/manual/administration/install-community/](https://www.mongodb.com/docs/manual/administration/install-community/)
+
+Die folgende Beschreibung bezieht sich auf eine Installation von MongoDB Version 7.x unter Debian 12:<br>
+Falls du in der Shell vorher auf den User root wechselst (su) kannst du in den folgenden Kommandos das sudo-Kommando weglassen.
+- Debian aktualisieren
+  ```sh
+  sudo apt-get update
+  sudo apt-get upgrade
+  ```
+- notwendige Pakete installieren
+  ```sh
+  sudo apt-get install gnupg curl
+  ```
+- Public GPG-key importieren
+  ```sh
+  # veraltet --> wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+  curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+  ```
+- Installations-Repository erweitern
+  ```sh
+  echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/debian bullseye/mongodb-org/7.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+  ```
+- Paketinformationen aktualisieren
+  ```sh
+  sudo apt-get update
+  ```
+- MongoDB installieren
+  ```sh
+  sudo apt-get install -y mongodb-org
+  ```
+- Falls Probleme mit der Installation
+  Fehlermeldung: mongodb-org-mongos : Depends: libssl1.1 (>= 1.1.1) but it is not installable<br>
+  - [https://askubuntu.com/questions/1403619/mongodb-install-fails-on-ubuntu-22-04-depends-on-libssl1-1-but-it-is-not-insta](https://askubuntu.com/questions/1403619/mongodb-install-fails-on-ubuntu-22-04-depends-on-libssl1-1-but-it-is-not-insta)
+  - [https://medium.com/@hackthebox/installing-mongodb-7-0-community-edition-on-debian-12-bookworm-a-comprehensive-guide-19906ddb47ad](https://medium.com/@hackthebox/installing-mongodb-7-0-community-edition-on-debian-12-bookworm-a-comprehensive-guide-19906ddb47ad)
+  - [https://andre.hemk.es/ubuntu-apt-get-steht-bei-waiting-for-headers/](https://andre.hemk.es/ubuntu-apt-get-steht-bei-waiting-for-headers/)
+  - [https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-debian/](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-debian/)
+
+  Zuerst das libssl1.1-Paket vom Ubuntu-Repository installieren
+  ```sh
+  wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+  dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+  sudo apt-get update
+  sudo apt-get install -y mongodb-org
+  ```  
+- mongodb-deamon starten, stoppen, ...
+  ```sh
+  sudo systemctl start mongod
+  sudo systemctl stop mongod
+  sudo systemctl restart mongod
+  sudo systemctl status mongod
+  sudo systemctl enable mongod
+  ```
+- MongoDB-Shell starten
+  ```sh
+  mongosh
+  ```
+
+Installation unter Windows siehe [https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/)
+
+MongoDB Compass (GUI-Interface) siehe [https://www.mongodb.com/try/download/compass](https://www.mongodb.com/try/download/compass)
 
 ### MongoShell
 starten über den Befehl **mongosh**
