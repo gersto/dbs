@@ -117,35 +117,35 @@ starten über den Befehl **mongosh**
    ```
 
 10. Mehrere Documents hinzufügen
-   ```mongosh
-   db.products.insertMany (
-     [ 
-       { 
-         name: "Apfel", 
-         price: 0.60, 
-         category: 'Obst',
-         views: 2
-       },
-       { 
-         name: "Apfel Neu", 
-         price: 0.80, 
-         category: 'Obst',
-         views: 10
-       }, 
-       { 
-         name: "Kiwi", 
-         price: 1.19, 
-         category: 'Obst',
-         views: 0,
-         ratings: [
-           { user: 'Paul', stars: 4},
-           { user: 'Tom', stars: 5},
-           { user: 'Max', stars: 3}
-         ] 
-       }
-     ]
-   )
-   ```
+    ```mongosh
+    db.products.insertMany (
+      [ 
+        { 
+          name: "Apfel", 
+          price: 0.60, 
+          category: 'Obst',
+          views: 2
+        },
+        { 
+          name: "Apfel Neu", 
+          price: 0.80, 
+          category: 'Obst',
+          views: 10
+        }, 
+        { 
+          name: "Kiwi", 
+          price: 1.19, 
+          category: 'Obst',
+          views: 0,
+          ratings: [
+            { user: 'Paul', stars: 4},
+            { user: 'Tom', stars: 5},
+            { user: 'Max', stars: 3}
+          ] 
+        }
+      ]
+    )
+    ```
 
 11. Alle Documents aus der Collection anzeigen
     ```mongosh
@@ -153,132 +153,132 @@ starten über den Befehl **mongosh**
     ```
 
 12. Ergebnisse formatiert
-   ```mongosh
-   db.products.find().pretty()
-   ```
+    ```mongosh
+    db.products.find().pretty()
+    ```
 
 13. Ergebnisse filtern
-   ```mongosh
-   db.products.find({ name: 'Apfel' })
-   ```
+    ```mongosh
+    db.products.find({ name: 'Apfel' })
+    ```
 
 14. Ergebnisse sortieren
-   ```mongosh
-   db.products.find().sort({ name: 1 })
-   db.products.find().sort({ name: -1 })
-   ```
+    ```mongosh
+    db.products.find().sort({ name: 1 })
+    db.products.find().sort({ name: -1 })
+    ```
 
 15. Ergebnisse zählen
-   ```mongosh
-   db.products.find().count()
-   db.products.countDocuments()
-   ```
+    ```mongosh
+    db.products.find().count()
+    db.products.countDocuments()
+    ```
 
 16. Ergebnisse limitieren
-   ```mongosh
-   db.products.find().limit(2)
-   ```
+    ```mongosh
+    db.products.find().limit(2)
+    ```
 
 17. Verkettung mehrerer Funktionen
-   ```mongosh
-   db.products.find().limit(2).sort({ price: 1 })
-   ```
+    ```mongosh
+    db.products.find().limit(2).sort({ price: 1 })
+    ```
 
 18. ForEach Schleife
-   ```mongosh
-   db.products.find().forEach(function(doc) {
-     print("Produkt: " + doc.name)
-   })
-   ```
+    ```mongosh
+    db.products.find().forEach(function(doc) {
+      print("Produkt: " + doc.name)
+    })
+    ```
 
 19. Ergebnisse nach Größer/Kleiner filtern
-   ```mongosh
-   db.products.find({ price: { $gt: 1 } })
-   db.products.find({ price: { $gte: 0.99 } })
-   db.products.find({ price: { $lt: 0.99 } })
-   db.products.find({ price: { $lte: 0.99 } })
-   ```
+    ```mongosh
+    db.products.find({ price: { $gt: 1 } })
+    db.products.find({ price: { $gte: 0.99 } })
+    db.products.find({ price: { $lt: 0.99 } })
+    db.products.find({ price: { $lte: 0.99 } })
+    ```
 
 20. Feld indexieren
-   ```mongosh
-   db.products.createIndex(
-     { name: 'text' }, 
-     { default_language: "german" }
-   )
-   ```
+    ```mongosh
+    db.products.createIndex(
+      { name: 'text' }, 
+      { default_language: "german" }
+    )
+    ```
 
 21. Alle Indexes anzeigen
-   ```mongosh
-   db.products.getIndexes()
-   ```
+    ```mongosh
+    db.products.getIndexes()
+    ```
 
 22. Index löschen
-   ```mongosh
-   db.products.dropIndex('name_text')
-   ```
+    ```mongosh
+    db.products.dropIndex('name_text')
+    ```
 
 23. Textsuche
-   ```mongosh
-   db.products.find({
-     $text: {
-       $search: "Apfel"
-     }
-   })
-   ```
+    ```mongosh
+    db.products.find({
+      $text: {
+        $search: "Apfel"
+      }
+    })
+    ```
 
 24. Nur ein Ergebnis
-   ```mongosh
-   db.products.findOne({ category: 'Obst' })
-   ```
+    ```mongosh
+    db.products.findOne({ category: 'Obst' })
+    ```
 
 25. Ergebnisse gefiltert und mit bestimmten Feldern
-   ```mongosh
-   db.products.find({ category: 'Obst' }, {
-     name: 1,
-     price: 1
-   })
-   ```
+    ```mongosh
+    db.products.find({ category: 'Obst' }, {
+      name: 1,
+      price: 1
+    })
+    ```
 
 26. Alle Ergebnisse mit bestimmten Feldern
-   ```mongosh
-   db.products.find({}, {
-     name: 1,
-     price: 1
-   })
-   ```
+    ```mongosh
+    db.products.find({}, {
+      name: 1,
+      price: 1
+    })
+    ```
 
 27. Alle Ergebnisse ohne bestimmte Felder
-   ```mongosh
-   db.products.find({}, {
-     ratings: 0,
-     date: 0
-   })
-   ```
+    ```mongosh
+    db.products.find({}, {
+      ratings: 0,
+      date: 0
+    })
+    ```
 
 28. Ein Document aktualisieren
-   ```mongosh
-   db.products.updateOne({ name: "Banane" },
-   {
-     $set: { 
-       price: 1.29 
-     }
-   })
-   ```
+    ```mongosh
+    db.products.updateOne({ name: "Banane" },
+    {
+      $set: { 
+        price: 1.29 
+      }
+    })
+    ```
 
 29. Ein Document aktualisieren/hinzufügen
-   ```mongosh
-   db.products.updateOne({ name: 'Gurke' },
-   {
-     $set: { 
-       price: 0.5 ,
-       category: 'Gemüse',
-       views: 0
-     }
-   },
-   {
-     upsert: true
-   })
-   ```
+    ```mongosh
+    db.products.updateOne({ name: 'Gurke' },
+    {
+      $set: { 
+        price: 0.5 ,
+        category: 'Gemüse',
+        views: 0
+      }
+    },
+    {
+      upsert: true
+    })
+    ```
 
 30. Viele Documents aktualisieren
    ```mongosh
@@ -291,50 +291,50 @@ starten über den Befehl **mongosh**
    ```
 
 31. Einen Wert erhöhen
-   ```mongosh
-   db.products.updateOne({ name: 'Gurke' },
-   {
-     $inc: {
-       views: 1
-     }
-   })
-   ```
+    ```mongosh
+    db.products.updateOne({ name: 'Gurke' },
+    {
+      $inc: {
+        views: 1
+      }
+    })
+    ```
 
 32. Ein Feld umbenennen
-   ```mongosh
-   db.products.update({ name: 'Gurke' },
-   {
-     $rename: {
-       views: 'likes'
-     }
-   })
-   ```
+    ```mongosh
+    db.products.update({ name: 'Gurke' },
+    {
+      $rename: {
+        views: 'likes'
+      }
+    })
+    ```
 
 33. Daten aus Collections verarbeiten
-   ```mongosh
-   db.products.aggregate([
-     {
-       $match: { 
-         price: { $lt: 0.99 }
-       }
-     },
-     {
-       $group: {
-         _id: "$category", 
-         total_views: { $sum: "$views"}}
-     }
-   ])
-   ```
+    ```mongosh
+    db.products.aggregate([
+      {
+        $match: { 
+          price: { $lt: 0.99 }
+        }
+      },
+      {
+        $group: {
+          _id: "$category", 
+          total_views: { $sum: "$views"}}
+      }
+    ])
+    ```
 
 34. Ein Document löschen
-   ```mongosh
-   db.products.deleteOne({ name: 'Gurke' })
-   ```
+    ```mongosh
+    db.products.deleteOne({ name: 'Gurke' })
+    ```
 
 35. Viele Documents löschen
-   ```mongosh
-   db.products.deleteMany({ category: 'Obst' })
-   ```
+    ```mongosh
+    db.products.deleteMany({ category: 'Obst' })
+    ```
 
 ### Performance
 - ohne Index
