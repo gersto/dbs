@@ -148,9 +148,9 @@ starten über den Befehl **mongosh**
    ```
 
 11. Alle Documents aus der Collection anzeigen
-   ```mongosh
-   db.products.find()
-   ```
+    ```mongosh
+    db.products.find()
+    ```
 
 12. Ergebnisse formatiert
    ```mongosh
