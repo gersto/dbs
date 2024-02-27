@@ -73,7 +73,7 @@ starten über den Befehl **mongosh**
 
 2. Aktualle Datenbank anzeigen
    ```mongosh
-   show dbs
+   db
    ```
 
 3. Datenbank verwenden/anlegen<br>
