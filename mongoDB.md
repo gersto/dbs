@@ -91,7 +91,7 @@ starten über den Befehl **mongosh**
 
 5. Neue Collection anlegen
    ```mongosh
-  db.createCollection('products')
+   db.createCollection('products')
    ```
 
 6. Alle Collections anzeigen
