@@ -281,14 +281,14 @@ starten über den Befehl **mongosh**
     ```
 
 30. Viele Documents aktualisieren
-   ```mongosh
-   db.products.updateMany({ category: "Obst" },
-   {
-     $set: { 
-       price: 0.2 
-     }
-   })
-   ```
+    ```mongosh
+    db.products.updateMany({ category: "Obst" },
+    {
+      $set: { 
+        price: 0.2 
+      }
+    })
+    ```
 
 31. Einen Wert erhöhen
     ```mongosh
