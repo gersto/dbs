@@ -72,6 +72,8 @@ Vor diesem Hintergrund basieren nicht-relationale Datenbanken auf flexiblen Mode
 - Da sie keine spezifische Struktur oder kein spezifisches Schema für die gespeicherten Daten haben, können Sie sich nicht auf Ihre Daten für ein bestimmtes Feld verlassen, da diese möglicherweise nicht vorhanden sind.
 - Wenn keine Beziehungen vorhanden sind, ist die Aktualisierung der Daten schwierig, da Sie jedes Detail einzeln aktualisieren müssen.
 
+![db10.jpg](pic/db10.jpg)
+
 #### Arten von NoSQL-Datenbanken
 
 1. **Dokumentdatenbanken**<br>
