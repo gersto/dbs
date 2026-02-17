@@ -76,6 +76,14 @@ Vor diesem Hintergrund basieren nicht-relationale Datenbanken auf flexiblen Mode
 
 #### Arten von NoSQL-Datenbanken
 
+[Weitere Infos](https://www.altexsoft.com/blog/nosql-databases/)
+
+![db11.png](pic/db11.png)
+
+![db12.png](pic/db12.png)
+
+![db13.png](pic/db13.png)
+
 1. **Dokumentdatenbanken**<br>
    Dokumentdatenbanken speichern Daten in **XML** or **JSON** Dokumente in diesen Datenbanken können verschachtelt werden (ein Dokument kann in einem anderen gespeichert werden) und bestimmte Elemente können auch indiziert werden, um eine schnellere Abfrage zu ermöglichen. Einige der bekanntesten NoSQL-Datenbanken sind Couchbase mit einem MongoDB, fallen in diese Kategorie.<br>
    Vorteile:
@@ -93,12 +101,46 @@ Vor diesem Hintergrund basieren nicht-relationale Datenbanken auf flexiblen Mode
 
 2. **Spaltenorientierte Datenbanken**<br>
    Im Gegensatz zu relationalen Datenbanken, die Daten in Zeilen speichern, sind spaltenorientierte Datenbanken als eine Sammlung von Spalten organisiert. Diese Datenbanken sind hilfreich für die Durchführung von Analysen, da nur eine kleine Anzahl von Spalten direkt gelesen werden kann. Jede dieser Spalten kann als Datensatz fungieren, was bei der Skalierung von Petabyte an Daten hilft. Häufig verwendete Beispiele sind Scylla, HBase und Kassandra
+
+   Vorteile:
+   - Gut für große Datenmengen
+   - Hohe Verfügbarkeit und Fehlertoleranz
+  
+   Nachteile:
+   - Komplex im Vergleich zu Key-Value und Dokumentenspeicher
+   - Nicht ideal für Echtzeit-Anwendungen
+  
+   Anwendungsfälle:
+   - Big Data
+   - Finanzanwendungen
    
-3. **Graphdatenbanken**<br>
+4. **Graphdatenbanken**<br>
    Graphdatenbanken zeigen die Verbindungen zwischen verschiedenen Datenpunkten. Sie werden verwendet, um verschiedene Datentypen und ihre Beziehungen zueinander zu analysieren. Graphdatenbanken werden als Netzwerk verwandter Objekte oder Knoten dargestellt. Beispiele sind Datastax Enterprise Graph mit einem Neo4J.
 
-4. **Schlüssel-Wert-Speicher (Key-Value-DB)**<br>
+   Vorteile:
+   - Einfache, verständliche Darstellung
+  
+   Nachteile:
+   - Schwierigere Skalierung als andere NoSQL-Typen
+   - Nicht optimal für stark strukturierte Daten 
+  
+   Anwendungsfälle:
+   - Social networks
+
+6. **Schlüssel-Wert-Speicher (Key-Value-DB)**<br>
    Dieser DB-Typ speichert und liefert nur schnelles und unkompliziertes Wissen über Schlüssel-Wert-Paare. Dies ist eine einfache und unkomplizierte Möglichkeit, die Daten zu speichern und darauf zuzugreifen. Einige beliebte Beispiele sind Amazon DynamoDB mit einem Redis.
+
+   Vorteile:
+   - Hohe Performance
+   - Einfacher Aufbau
+  
+   Nachteile:
+   - Keine komplexen Abfragen
+   - Schwierig zu analysieren
+  
+   Anwendungsfälle:
+   - Caching-Systeme
+   - Sitzungsverwaltung
 
 ### Objektorientierte Datenbanken
 
@@ -131,6 +173,12 @@ Die Datenbank ähnelt einer hierarchischen Datenbank, unterscheidet sich jedoch 
 - Eine Netzwerkdatenbank hängt stark von ihrer vordefinierten Struktur ab, was Änderungen zeitaufwändig und schwierig macht.
 
 ![db04.jpg](pic/db04.jpg)
+
+### NewSQL-Datenbanken
+
+[Weitere Infos](https://medium.com/@madushankanipunajith/newsql-databases-%EF%B8%8F-78b50fbae357)
+
+![db14.jpg](pic/db14.jpg)
 
 
 
