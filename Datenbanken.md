@@ -180,6 +180,15 @@ Die Datenbank ähnelt einer hierarchischen Datenbank, unterscheidet sich jedoch 
 
 ![db14.jpg](pic/db14.jpg)
 
+### Verfügbarkeiten
+
+[Weitere Infos](https://medium.com/@pranabj.aec/acid-cap-and-base-cc73dee43f8c)
+
+[Weitere Infos](https://www.linkedin.com/pulse/acid-cap-base-unveiling-database-consistency-omar-mahmoud/)
+
+- ACID - Atomicity, Consistency, Isolation, Durability
+- BASE - Basically-Available, Soft-state, Eventually-consistent
+- CAP - Consistency, Availability, Partition-tolerance
 
 
 
